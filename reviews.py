@@ -1,5 +1,10 @@
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+import streamlit as st
+import pickle
+from sklearn.model_selection import train_test_split
+
 # Read our dataset using read_csv()
 bbc_text = pd.read_csv(r'C:\Users\aysha\Downloads\bbc-text.txt')
 bbc_text=bbc_text.rename(columns = {'text': 'News_Headline'}, inplace = False)
