@@ -6,7 +6,7 @@ import pickle
 from sklearn.model_selection import train_test_split
 
 # Read our dataset using read_csv()
-bbc_text = pd.read_csv(r'C:\Users\aysha\Downloads\bbc-text.txt')
+bbc_text = pd.read_csv('bbc-text.txt')
 bbc_text=bbc_text.rename(columns = {'text': 'News_Headline'}, inplace = False)
 bbc_text.head()
 bbc_text.category = bbc_text.category.map({'tech':0, 'business':1, 'sport':2, 'entertainment':3, 'politics':4})
